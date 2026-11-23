@@ -1,0 +1,36 @@
+<mvc:View
+    controllerName="lesson2assignment.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Lesson 2"
+        showHeader="true"
+    >
+        <content>
+            <VBox id="contentBox">
+                <HBox
+                    id="buttonGroup"
+                    class="sapUiSmallMargin"
+                >
+                    <Button
+                        id="sayHelloButton"
+                        text="Say Hello"
+                        press=".onSayHello"
+                    />
+                    <Button
+                        id="previewNameButton"
+                        text="Preview Name"
+                        press=".onPreviewName"
+                    />
+                    <Button
+                        id="previewFallbackButton"
+                        text="Preview Fallback"
+                        press=".onPreviewFallback"
+                    />
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
