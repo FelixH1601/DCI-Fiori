@@ -1,6 +1,69 @@
-<mvc:View controllerName="project1.controller.View1"
+<mvc:View
+    controllerName="project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Day 1"
+        showHeader="true"
+        showFooter="true"
+    >
+        <content>
+            <VBox id="contentBox">
+                <Title
+                    id="welcomeTitle"
+                    text="My SAPUI5 learning space."
+                    class="sapUiSmallMargin"
+                />
+                <Text
+                    id="welcomeText"
+                    text="Goal: connect a button to a controller method."
+                    class="sapUiSmallMarginBegin"
+                />
+                <HBox
+                    id="buttonGroup"
+                    class="sapUiSmallMargin"
+                >
+                    <Button
+                        id="sayHelloButton"
+                        text="Say Hello"
+                        press=".onSayHello"
+                    />
+                    <Button
+                        id="courseInfoButton"
+                        text="Course Info"
+                        press=".onShowCourseInfo"
+                        class="sapUiSmallMarginBegin"
+                    />
+                    <Button
+                        id="studyTipButton"
+                        text="Study Tip"
+                        press=".onShowStudyTip"
+                        class="sapUiSmallMarginBegin"
+                    />
+                    <Button
+                        id="nextStepButton"
+                        text="Next Step"
+                        press=".onShowNextStep"
+                        class="sapUiSmallMarginBegin"
+                    />
+                    <Button
+                        id="toggleFooterButton"
+                        text="Toggle Footer"
+                        press=".onToggleFooter"
+                        class="sapUiSmallMarginBegin"
+                    />
+                </HBox>
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar id="footerBar">
+                <Text
+                    id="footerRext"
+                    text="Crazy important footer text!!!"
+                />
+            </Toolbar>
+        </footer>
     </Page>
 </mvc:View>
