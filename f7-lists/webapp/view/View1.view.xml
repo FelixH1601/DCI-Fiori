@@ -1,0 +1,51 @@
+<mvc:View
+    controllerName="f7lists.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        title="State Capitals"
+    >
+        <List
+            id="cityList"
+            headerText="State Capitals"
+            items="{/cities}"
+        >
+            <CustomListItem id="customListItem">
+                <HBox>
+                    <Label
+                        id="cityName"
+                        text="{name}"
+                        class="sapUiSmallMargin"
+                        width="8rem"
+                    />
+                    <Label
+                        id="citizenCount"
+                        text="{citizens}"
+                        class="sapUiSmallMargin"
+                    />
+                    <HBox
+                        id="ButtonGroup"
+                        width="100%"
+                        justifyContent="End"
+                    >
+                        <Button
+                            class="sapUiTinyMargin"
+                            text="Details"
+                            press=".onShowDetails"
+                        >
+                            <customData>
+                                <core:CustomData
+                                    key="itemName"
+                                    value="{federalState}"
+                                />
+                            </customData>
+                        </Button>
+                    </HBox>
+                </HBox>
+            </CustomListItem>
+        </List>
+    </Page>
+</mvc:View>
