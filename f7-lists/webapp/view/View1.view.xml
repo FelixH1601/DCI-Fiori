@@ -14,15 +14,15 @@
             items="{/cities}"
         >
             <CustomListItem id="customListItem">
-                <HBox>
+                <HBox id="contentBox">
                     <Label
-                        id="cityName"
+                        id="cityNameLabel"
                         text="{name}"
                         class="sapUiSmallMargin"
                         width="8rem"
                     />
                     <Label
-                        id="citizenCount"
+                        id="citizenCountLabel"
                         text="{citizens}"
                         class="sapUiSmallMargin"
                     />
@@ -32,6 +32,7 @@
                         justifyContent="End"
                     >
                         <Button
+                            id="showDetailsButton"
                             class="sapUiTinyMargin"
                             text="Details"
                             press=".onShowDetails"
